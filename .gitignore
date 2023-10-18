@@ -1,3 +1,4 @@
+
 # Ignore Python bytecode files
 __pycache__
 
@@ -24,8 +25,8 @@ examples/temp_database
 examples/temp_agent
 
 # Ignore source distribution and egg info
-/src/agent.egg-info
-/src/dist
+src/ai_agents.egg-info
+src/dist
 
 # Ignore agent logs
 /src/agents/logs
