@@ -57,7 +57,10 @@ class SOP:
     def from_config(cls, config_path):
         with open(config_path) as f:
             config = json.load(f)
+        _API_KEY = os.environ['API_KEY'] if 'API_KEY' in os.environ else None
         os.environ.clear()
+        if _API_KEY:
+            os.environ['API_KEY'] = _API_KEY
         for key,value in config["config"].items():
             if value!="":
                 os.environ[key] = value
